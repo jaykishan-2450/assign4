@@ -1,0 +1,56 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta width="devicewidth">
+<title> web training</title>
+<style>
+.button{
+border:5;
+border-radius:50;}
+</style>
+
+</head>
+<body style="background-color:pink">
+
+<h1 >LETS PLAY A GAME</H2><br>
+
+<h2> it's very simple! you just give me a number ,i willguess it randomly</h2>
+
+<center><button onclick="fun()" style="background-color:blue"> play </button></center>
+
+ 
+
+<script>
+
+function fun(){
+var a,b,c;
+a=prompt("Here comes ur turn! Give me a number of two digits");
+
+if(a>=10 && a<=99){
+
+for(b=0;b<1000;b++){
+c=Math.random();
+document.write(Math.round(c*100),"</br>");
+if(a==Math.round(c*100)){
+document.write("hehe i won! just in ",b,"th turn");
+break;
+}
+if(b==999){
+document.write("you won!i coudn't guess.");}
+}
+}
+
+else{
+document.write("error! enter a two digit number!");}
+
+}
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
